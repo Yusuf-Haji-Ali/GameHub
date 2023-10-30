@@ -13,9 +13,9 @@ interface Props {
 export const GameGrid = ({ gameQuery }: Props) => {
   const { data, error, loading } = useGames(gameQuery);
 
-  error ? (
-    <Text>{error}</Text>
-  ) : (
+  if (error) return <Text>{error}</Text>;
+
+  return (
     <SimpleGrid
       columns={{ sm: 1, md: 2, lg: 3, xl: 4 }}
       spacing={6}
