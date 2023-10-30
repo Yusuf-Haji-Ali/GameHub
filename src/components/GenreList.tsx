@@ -18,9 +18,22 @@ interface Props {
 
 export const GenreList = ({ onSelectGenre, selectedGenre }: Props) => {
   const { data, loading, error } = useGenres();
-  const skeletons = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
+  // To be implemented if fetching data
   if (error) return null;
+
+  if (loading)
+    return (
+      <>
+        <SkeletonText noOfLines={1} width={"100%"} marginY={5} />
+        {data.map(() => (
+          <HStack marginBottom={2}>
+            <Skeleton boxSize={"32px"} />
+            <SkeletonText noOfLines={1} width={"125px"} />
+          </HStack>
+        ))}
+      </>
+    );
 
   return (
     <>
@@ -28,14 +41,6 @@ export const GenreList = ({ onSelectGenre, selectedGenre }: Props) => {
         Genres
       </Heading>
       <List>
-        {loading &&
-          skeletons.map((skeleton) => (
-            <HStack marginBottom={"5px"}>
-              <Skeleton boxSize={"32px"} />
-              <SkeletonText noOfLines={1} width={"125px"} />
-            </HStack>
-          ))}
-
         {data.map((genre) => (
           <ListItem key={genre.id} paddingY={"5px"}>
             <HStack>
