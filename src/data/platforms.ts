@@ -1,5 +1,8 @@
-export default [
-  [
+export default {
+  count: 14,
+  next: null,
+  previous: null,
+  results: [
     {
       id: 1,
       name: "PC",
@@ -256,9 +259,9 @@ export default [
           id: 7,
           name: "Nintendo Switch",
           slug: "nintendo-switch",
-          games_count: 5359,
+          games_count: 5360,
           image_background:
-            "https://media.rawg.io/media/games/c4b/c4b0cab189e73432de3a250d8cf1c84e.jpg",
+            "https://media.rawg.io/media/games/f99/f9979698c43fd84c3ab69280576dd3af.jpg",
           image: null,
           year_start: null,
           year_end: null,
@@ -300,9 +303,9 @@ export default [
           id: 10,
           name: "Wii U",
           slug: "wii-u",
-          games_count: 1135,
+          games_count: 1134,
           image_background:
-            "https://media.rawg.io/media/games/849/849414b978db37d4563ff9e4b0d3a787.jpg",
+            "https://media.rawg.io/media/games/bee/bee483efadcf9d7e657e52184316a34e.jpg",
           image: null,
           year_start: null,
           year_end: null,
@@ -311,9 +314,9 @@ export default [
           id: 11,
           name: "Wii",
           slug: "wii",
-          games_count: 2243,
+          games_count: 2242,
           image_background:
-            "https://media.rawg.io/media/screenshots/f10/f10e7cafed6665861c58187b2ae3b310.jpg",
+            "https://media.rawg.io/media/screenshots/4f2/4f2246a85225b7a91d63990fe540b7c4.jpg",
           image: null,
           year_start: null,
           year_end: null,
@@ -660,4 +663,4 @@ export default [
       ],
     },
   ],
-];
+};
